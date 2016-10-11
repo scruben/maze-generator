@@ -1,4 +1,6 @@
-var createMaze = function(rows,columns) {
+// Based on https://en.wikipedia.org/wiki/Maze_generation_algorithm#Python_code_example
+
+function createMaze (rows,columns) {
   // Array M contains the maze, each cell a possible position.
   // The first four elements shows if the cell has wall in each direction
   // (left, up, right, bottom). The fifth element is to flag if the cell
@@ -57,8 +59,6 @@ var createMaze = function(rows,columns) {
   return renderMaze(M);
 };
 
-
-
 function emptyArray(row,col) {
   var output = [];
   for (var i = 0; i < row; i++) {
@@ -70,7 +70,6 @@ function emptyArray(row,col) {
   }
   return output;
 }
-
 
 function renderMaze(maze) {
   // creates an empty maze
@@ -100,4 +99,4 @@ function renderMaze(maze) {
   return strOutput;
 }
 
-console.log(createMaze(10,40));
+// console.log(createMaze(10,40));
